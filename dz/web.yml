@@ -1,0 +1,7 @@
+---
+
+- name: Configuration web
+  hosts: all
+  become: true
+  roles:
+    - wordpress
