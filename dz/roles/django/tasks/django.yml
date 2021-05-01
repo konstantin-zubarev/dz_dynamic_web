@@ -8,16 +8,12 @@
 - name: Install policycoreutils-python
   yum:
     name: policycoreutils-python
-  notify: selinux
+#  notify: selinux
 
 - name: Install packages
   package:
     name: [gcc, python-pip,python-devel]
     state: present
-#  with_items:
-#    - gcc
-#    - python-pip
-#    - python-devel
 
 - name: Upgrade pip
   shell: curl https://bootstrap.pypa.io/pip/2.7/get-pip.py | python

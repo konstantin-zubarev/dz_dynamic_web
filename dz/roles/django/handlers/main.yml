@@ -3,7 +3,7 @@
 
 - name: Selinux add port
   shell: semanage port -a -t http_port_t -p tcp 8085
-  listen: selinux
+  listen: start nginx
 
 - name: Uwsgi restart
   systemd:
