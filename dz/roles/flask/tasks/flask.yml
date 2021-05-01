@@ -1,0 +1,46 @@
+---
+# tasks file for roles/flask
+
+- name: Install python packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - tree
+    - python-devel
+    - python-setuptools
+    - python3-pip
+    - python3-devel
+
+- name: install various libraries with pip
+  action: pip name=$item state=present
+  with_items:
+    - virtualenv
+    - supervisor
+    - uwsgi
+
+- name: Update core pip packages
+  pip:
+    name: setuptools
+      - pip
+      - setuptools
+      - wheel
+    state: latest
+
+- name: Install virtualenv
+  pip:
+    name: virtualenv
+    state: present
+
+- name: Copy config file
+  copy:
+    src: requirements.txt
+    dest: /root/requirements.txt
+
+- name: install modules in a virtualenv
+  pip:
+    requirements: /root/requirements.txt
+    virtualenv: /home/env
+    virtualenv_python: python3
+
+
