@@ -4,5 +4,5 @@
   hosts: all
   become: true
   roles:
-#    - wordpress
-    - django
+    - wordpress
+#    - django

@@ -2,7 +2,7 @@
 # handlers file for roles/django
 
 - name: Selinux add port
-  shell: semanage port -a -t http_port_t -p tcp 82
+  shell: semanage port -a -t http_port_t -p tcp 8085
   listen: selinux
 
 - name: Uwsgi restart
