@@ -33,9 +33,9 @@ Django
 ![](django.jpeg)
 
 
-Проверка сайта Wordpress
+React
 ------------------------
 
 В браузере открыть [http://192.168.11.10:8090/](http://192.168.11.10:8090/)
 
-![](wordpress.jpeg)
+![](react.jpeg)
