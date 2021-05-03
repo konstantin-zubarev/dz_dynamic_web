@@ -13,7 +13,7 @@
 
 - Wordpress (nginx + php-fpm)
 - Django (nginx + python)
-- nginx + python (flask/django)
+- React (nginx + php-fpm + js)
 
 Поднимаем стенд `vagrant up`.
 
